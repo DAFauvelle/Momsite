@@ -1,0 +1,25 @@
+<body>
+    <h1>Genealogie</h1>
+    <ul>
+        {% for f in famillies %}
+            {% if f.name != 'none' %}
+                <li><a href ="{% url 'family-detail' famille=f.name %}">Famille {{ f.name }}</a></li>
+            {% endif %}
+        {% endfor %}
+        
+        <li><a href = "{% url 'bibliographie-detail' %}">Bibliographie</a></li>
+    </ul>
+
+    <h2>Bibliographie</h2>
+    {% for family in famillies %}
+        {% if family.name != 'none' %}
+            <h3>{{ family.name }}</h3>
+            {% for ref in refs %}
+                {% if ref.article.family == family %}
+                    <p>{{ ref.title }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+</body>
