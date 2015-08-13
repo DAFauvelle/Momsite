@@ -5,17 +5,10 @@ from django.template import Context, loader
 from .models import Article, Family, Reference, Liens, Photos
 
 # Create your views here.
-def index(resquest):
-    return HttpResponse("Hello, world. This is my mom's site!")
-
-def bonjour(request):
-    return HttpResponse("Salut, c'est la page par default")
+"""def index(resquest):
+    return HttpResponse("Hello, world. This is my mom's site!")"""
     
-def homepage(request):
-    #template = loader.get_template('articles/homepage.html')
-    #return HttpResponse(template.render(Context))
-    #Bonne facon de faire!
-    
+def index(request):
     return render_to_response('articles/homepage.html', {'famillies': Family.objects.all()})
     
 def famille(request, famille):

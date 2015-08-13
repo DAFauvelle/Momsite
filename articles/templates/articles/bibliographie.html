@@ -1,15 +1,6 @@
-<body>
-    <h1>Genealogie</h1>
-    <ul>
-        {% for f in famillies %}
-            {% if f.name != 'none' %}
-                <li><a href ="{% url 'family-detail' famille=f.name %}">Famille {{ f.name }}</a></li>
-            {% endif %}
-        {% endfor %}
-        
-        <li><a href = "{% url 'bibliographie-detail' %}">Bibliographie</a></li>
-        <li><a href = "{% url 'liens-detail' %}">Liens</a></li>
-    </ul>
+{% extends "base.html" %}
+
+{% block content_block %}
 
     <h2>Bibliographie</h2>
     {% for family in famillies %}
@@ -23,4 +14,4 @@
         {% endif %}
     {% endfor %}
 
-</body>
+{% endblock %}
