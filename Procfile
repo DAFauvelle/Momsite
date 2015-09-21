@@ -1,0 +1,1 @@
+web: gunicorn momsite2.wsgi
