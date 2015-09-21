@@ -31,7 +31,7 @@ oslo.rootwrap==1.2.0
 paramiko==1.10.1
 pbr==0.7.0
 pexpect==3.1
-prettytable==0.7.2Babel==1.3
+prettytable==0.7.2
 BzrTools==2.6.0
 Django==1.7.1
 FormEncode==1.2.6
