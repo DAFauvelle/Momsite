@@ -39,4 +39,12 @@ class Photos(models.Model):
     
     def __unicode__(self):
         return self.title
+        
+class ImagePDF(models.Model):
+    title = models.CharField(max_length=255)
+    la_photo = models.FileField(upload_to = "images/", max_length = 255)
+    article = models.ForeignKey(Article)
+    
+    def __unicode__(self):
+        return self.title
     

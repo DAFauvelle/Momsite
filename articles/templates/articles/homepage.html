@@ -1,17 +1,56 @@
-<body>
-    <h1>Genealogie</h1>
-    <ul>
-        
-        {% for f in famillies %}
-            {% if f.name != 'none' %}
-                <li><a href ="{% url 'family-detail' famille=f.name %}">Famille {{ f.name }}</a></li>
-            {% endif %}
-        {% endfor %}
-        
-        <li><a href = "{% url 'bibliographie-detail' %}">Bibliographie</a></li>
-        <li><a href = "{% url 'liens-detail' %}">Liens</a></li>
-        <!--<li><a href ="/dostie">Famille Dostie</a></li>
-        <li>Famille Fauvelle</li>
-        <li><a href ="/famille/brunelle/">Famille Brunelle</a></li>-->
-    </ul>
-</body>
+{% extends "base.html" %}
+
+{% block content_block %}
+
+
+<div class="article_genealogy">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo turpis at arcu tincidunt, quis congue lorem feugiat. In vulputate nulla ac lectus euismod consequat. Etiam sed ultricies nisi. Integer justo felis, scelerisque et ultrices pharetra, euismod non odio. Nulla faucibus, odio vitae interdum finibus, magna ipsum mollis neque, non scelerisque arcu nibh non mi. Aenean quis ante ac felis fringilla tempor sed non quam. Nunc vitae orci eget nulla egestas efficitur.
+
+Maecenas pharetra urna non metus ultricies dictum. Ut varius porttitor posuere. Aliquam tincidunt mollis ligula sed tempor. Fusce ultrices scelerisque erat, at consequat odio tristique eget. Pellentesque feugiat non nibh nec gravida. Fusce nibh metus, sodales dignissim venenatis molestie, malesuada et ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis tincidunt ornare. Duis ut dapibus nisi. Curabitur nisl quam, vestibulum et nisi sed, consectetur venenatis nulla. Aliquam tellus nisi, vestibulum et odio eget, mattis sodales dui. Maecenas ut leo mollis justo tincidunt sagittis. In hac habitasse platea dictumst.
+
+Donec augue odio, dignissim ac lobortis nec, imperdiet quis nisl. Cras arcu eros, facilisis non purus ut, dignissim facilisis lectus. Quisque eros mauris, interdum quis aliquet vel, gravida vel quam. Donec ultrices dictum enim in porta. Pellentesque et dapibus erat, ut accumsan augue. Vestibulum elementum lorem quis placerat sodales. Aliquam faucibus est sed elit feugiat gravida. Proin id erat nec est venenatis maximus. Quisque pulvinar euismod elementum. Maecenas viverra dolor sit amet purus rhoncus tempor. Ut porta ante ante, eu iaculis ligula gravida et.
+
+Quisque dapibus ipsum nec tincidunt vestibulum. Nullam ut diam ac mi tincidunt molestie. Nullam ultrices quis nibh sed sollicitudin. Vivamus id blandit nunc. Aliquam sed cursus tortor. Integer auctor, felis id placerat sagittis, ex turpis viverra tellus, et pellentesque dolor neque bibendum velit. Nulla facilisi. Nullam hendrerit varius rutrum. In elementum ante eu neque dapibus suscipit. Cras non posuere ante. Aenean neque turpis, interdum eu ullamcorper eget, cursus non nisl. Ut ultricies faucibus metus at gravida. Morbi non ullamcorper turpis. Donec laoreet felis quam, scelerisque interdum est mollis vel. Quisque tempus nisl nec tellus mollis viverra. Sed fringilla dapibus felis eleifend laoreet.
+
+Etiam mattis, tortor a mollis varius, magna lectus condimentum ligula, id fermentum ex tellus non erat. Curabitur aliquet ipsum consequat lorem convallis laoreet. Maecenas finibus nulla et purus semper, a condimentum odio pretium. Vestibulum felis justo, dignissim nec eros vel, posuere lacinia urna. In dignissim, ligula sit amet cursus lacinia, massa orci fermentum ex, sed tempor arcu nisi a enim. Aliquam erat volutpat. Ut eleifend tincidunt gravida. Cras eu magna eget mi faucibus faucibus et non orci. Mauris consectetur nec arcu id interdum. Nam ac orci elit. Morbi magna velit, venenatis quis massa a, elementum gravida felis. Donec faucibus mauris vitae orci vulputate, vel aliquet nisl semper. Phasellus eleifend rhoncus mauris quis accumsan.</p>
+</div>
+
+
+<div class="article_genealogy">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo turpis at arcu tincidunt, quis congue lorem feugiat. In vulputate nulla ac lectus euismod consequat. Etiam sed ultricies nisi. Integer justo felis, scelerisque et ultrices pharetra, euismod non odio. Nulla faucibus, odio vitae interdum finibus, magna ipsum mollis neque, non scelerisque arcu nibh non mi. Aenean quis ante ac felis fringilla tempor sed non quam. Nunc vitae orci eget nulla egestas efficitur.
+
+Maecenas pharetra urna non metus ultricies dictum. Ut varius porttitor posuere. Aliquam tincidunt mollis ligula sed tempor. Fusce ultrices scelerisque erat, at consequat odio tristique eget. Pellentesque feugiat non nibh nec gravida. Fusce nibh metus, sodales dignissim venenatis molestie, malesuada et ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis tincidunt ornare. Duis ut dapibus nisi. Curabitur nisl quam, vestibulum et nisi sed, consectetur venenatis nulla. Aliquam tellus nisi, vestibulum et odio eget, mattis sodales dui. Maecenas ut leo mollis justo tincidunt sagittis. In hac habitasse platea dictumst.
+
+Donec augue odio, dignissim ac lobortis nec, imperdiet quis nisl. Cras arcu eros, facilisis non purus ut, dignissim facilisis lectus. Quisque eros mauris, interdum quis aliquet vel, gravida vel quam. Donec ultrices dictum enim in porta. Pellentesque et dapibus erat, ut accumsan augue. Vestibulum elementum lorem quis placerat sodales. Aliquam faucibus est sed elit feugiat gravida. Proin id erat nec est venenatis maximus. Quisque pulvinar euismod elementum. Maecenas viverra dolor sit amet purus rhoncus tempor. Ut porta ante ante, eu iaculis ligula gravida et.
+
+Quisque dapibus ipsum nec tincidunt vestibulum. Nullam ut diam ac mi tincidunt molestie. Nullam ultrices quis nibh sed sollicitudin. Vivamus id blandit nunc. Aliquam sed cursus tortor. Integer auctor, felis id placerat sagittis, ex turpis viverra tellus, et pellentesque dolor neque bibendum velit. Nulla facilisi. Nullam hendrerit varius rutrum. In elementum ante eu neque dapibus suscipit. Cras non posuere ante. Aenean neque turpis, interdum eu ullamcorper eget, cursus non nisl. Ut ultricies faucibus metus at gravida. Morbi non ullamcorper turpis. Donec laoreet felis quam, scelerisque interdum est mollis vel. Quisque tempus nisl nec tellus mollis viverra. Sed fringilla dapibus felis eleifend laoreet.
+
+Etiam mattis, tortor a mollis varius, magna lectus condimentum ligula, id fermentum ex tellus non erat. Curabitur aliquet ipsum consequat lorem convallis laoreet. Maecenas finibus nulla et purus semper, a condimentum odio pretium. Vestibulum felis justo, dignissim nec eros vel, posuere lacinia urna. In dignissim, ligula sit amet cursus lacinia, massa orci fermentum ex, sed tempor arcu nisi a enim. Aliquam erat volutpat. Ut eleifend tincidunt gravida. Cras eu magna eget mi faucibus faucibus et non orci. Mauris consectetur nec arcu id interdum. Nam ac orci elit. Morbi magna velit, venenatis quis massa a, elementum gravida felis. Donec faucibus mauris vitae orci vulputate, vel aliquet nisl semper. Phasellus eleifend rhoncus mauris quis accumsan.</p>
+</div>
+
+<div class="article_genealogy">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo turpis at arcu tincidunt, quis congue lorem feugiat. In vulputate nulla ac lectus euismod consequat. Etiam sed ultricies nisi. Integer justo felis, scelerisque et ultrices pharetra, euismod non odio. Nulla faucibus, odio vitae interdum finibus, magna ipsum mollis neque, non scelerisque arcu nibh non mi. Aenean quis ante ac felis fringilla tempor sed non quam. Nunc vitae orci eget nulla egestas efficitur.
+
+Maecenas pharetra urna non metus ultricies dictum. Ut varius porttitor posuere. Aliquam tincidunt mollis ligula sed tempor. Fusce ultrices scelerisque erat, at consequat odio tristique eget. Pellentesque feugiat non nibh nec gravida. Fusce nibh metus, sodales dignissim venenatis molestie, malesuada et ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis tincidunt ornare. Duis ut dapibus nisi. Curabitur nisl quam, vestibulum et nisi sed, consectetur venenatis nulla. Aliquam tellus nisi, vestibulum et odio eget, mattis sodales dui. Maecenas ut leo mollis justo tincidunt sagittis. In hac habitasse platea dictumst.
+
+Donec augue odio, dignissim ac lobortis nec, imperdiet quis nisl. Cras arcu eros, facilisis non purus ut, dignissim facilisis lectus. Quisque eros mauris, interdum quis aliquet vel, gravida vel quam. Donec ultrices dictum enim in porta. Pellentesque et dapibus erat, ut accumsan augue. Vestibulum elementum lorem quis placerat sodales. Aliquam faucibus est sed elit feugiat gravida. Proin id erat nec est venenatis maximus. Quisque pulvinar euismod elementum. Maecenas viverra dolor sit amet purus rhoncus tempor. Ut porta ante ante, eu iaculis ligula gravida et.
+
+Quisque dapibus ipsum nec tincidunt vestibulum. Nullam ut diam ac mi tincidunt molestie. Nullam ultrices quis nibh sed sollicitudin. Vivamus id blandit nunc. Aliquam sed cursus tortor. Integer auctor, felis id placerat sagittis, ex turpis viverra tellus, et pellentesque dolor neque bibendum velit. Nulla facilisi. Nullam hendrerit varius rutrum. In elementum ante eu neque dapibus suscipit. Cras non posuere ante. Aenean neque turpis, interdum eu ullamcorper eget, cursus non nisl. Ut ultricies faucibus metus at gravida. Morbi non ullamcorper turpis. Donec laoreet felis quam, scelerisque interdum est mollis vel. Quisque tempus nisl nec tellus mollis viverra. Sed fringilla dapibus felis eleifend laoreet.
+
+Etiam mattis, tortor a mollis varius, magna lectus condimentum ligula, id fermentum ex tellus non erat. Curabitur aliquet ipsum consequat lorem convallis laoreet. Maecenas finibus nulla et purus semper, a condimentum odio pretium. Vestibulum felis justo, dignissim nec eros vel, posuere lacinia urna. In dignissim, ligula sit amet cursus lacinia, massa orci fermentum ex, sed tempor arcu nisi a enim. Aliquam erat volutpat. Ut eleifend tincidunt gravida. Cras eu magna eget mi faucibus faucibus et non orci. Mauris consectetur nec arcu id interdum. Nam ac orci elit. Morbi magna velit, venenatis quis massa a, elementum gravida felis. Donec faucibus mauris vitae orci vulputate, vel aliquet nisl semper. Phasellus eleifend rhoncus mauris quis accumsan.</p>
+</div>
+
+
+<div class="article_genealogy">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In commodo turpis at arcu tincidunt, quis congue lorem feugiat. In vulputate nulla ac lectus euismod consequat. Etiam sed ultricies nisi. Integer justo felis, scelerisque et ultrices pharetra, euismod non odio. Nulla faucibus, odio vitae interdum finibus, magna ipsum mollis neque, non scelerisque arcu nibh non mi. Aenean quis ante ac felis fringilla tempor sed non quam. Nunc vitae orci eget nulla egestas efficitur.
+
+Maecenas pharetra urna non metus ultricies dictum. Ut varius porttitor posuere. Aliquam tincidunt mollis ligula sed tempor. Fusce ultrices scelerisque erat, at consequat odio tristique eget. Pellentesque feugiat non nibh nec gravida. Fusce nibh metus, sodales dignissim venenatis molestie, malesuada et ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin venenatis tincidunt ornare. Duis ut dapibus nisi. Curabitur nisl quam, vestibulum et nisi sed, consectetur venenatis nulla. Aliquam tellus nisi, vestibulum et odio eget, mattis sodales dui. Maecenas ut leo mollis justo tincidunt sagittis. In hac habitasse platea dictumst.
+
+Donec augue odio, dignissim ac lobortis nec, imperdiet quis nisl. Cras arcu eros, facilisis non purus ut, dignissim facilisis lectus. Quisque eros mauris, interdum quis aliquet vel, gravida vel quam. Donec ultrices dictum enim in porta. Pellentesque et dapibus erat, ut accumsan augue. Vestibulum elementum lorem quis placerat sodales. Aliquam faucibus est sed elit feugiat gravida. Proin id erat nec est venenatis maximus. Quisque pulvinar euismod elementum. Maecenas viverra dolor sit amet purus rhoncus tempor. Ut porta ante ante, eu iaculis ligula gravida et.
+
+Quisque dapibus ipsum nec tincidunt vestibulum. Nullam ut diam ac mi tincidunt molestie. Nullam ultrices quis nibh sed sollicitudin. Vivamus id blandit nunc. Aliquam sed cursus tortor. Integer auctor, felis id placerat sagittis, ex turpis viverra tellus, et pellentesque dolor neque bibendum velit. Nulla facilisi. Nullam hendrerit varius rutrum. In elementum ante eu neque dapibus suscipit. Cras non posuere ante. Aenean neque turpis, interdum eu ullamcorper eget, cursus non nisl. Ut ultricies faucibus metus at gravida. Morbi non ullamcorper turpis. Donec laoreet felis quam, scelerisque interdum est mollis vel. Quisque tempus nisl nec tellus mollis viverra. Sed fringilla dapibus felis eleifend laoreet.
+
+Etiam mattis, tortor a mollis varius, magna lectus condimentum ligula, id fermentum ex tellus non erat. Curabitur aliquet ipsum consequat lorem convallis laoreet. Maecenas finibus nulla et purus semper, a condimentum odio pretium. Vestibulum felis justo, dignissim nec eros vel, posuere lacinia urna. In dignissim, ligula sit amet cursus lacinia, massa orci fermentum ex, sed tempor arcu nisi a enim. Aliquam erat volutpat. Ut eleifend tincidunt gravida. Cras eu magna eget mi faucibus faucibus et non orci. Mauris consectetur nec arcu id interdum. Nam ac orci elit. Morbi magna velit, venenatis quis massa a, elementum gravida felis. Donec faucibus mauris vitae orci vulputate, vel aliquet nisl semper. Phasellus eleifend rhoncus mauris quis accumsan.</p>
+</div>
+
+{% endblock %}

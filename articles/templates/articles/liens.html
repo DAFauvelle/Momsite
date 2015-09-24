@@ -2,12 +2,19 @@
 
 {% block content_block %}
 
-    <h2>Liens</h2>
 
-    <ul>
-    {% for lien in liens %}
-        <li><a href="{{ lien.addresse }}">{{ lien.title }}</a></li>
-    {% endfor %}
-    </ul>
+    <div class="article_container">
+        <div class="article_genealogy">
+        
+            <div class="page_section">
+                <h1>Liens</h1>
+            </div>
+            <ul>
+            {% for lien in liens %}
+                <li><a href="{{ lien.addresse }}">{{ lien.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
 
 {% endblock %}

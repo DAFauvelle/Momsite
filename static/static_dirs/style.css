@@ -1,0 +1,112 @@
+.navbar-default .navbar-nav>li>a {
+    color: #FFFFFF !important;
+    padding-right: 5em;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #000000 !important;
+}
+
+.navbar-nav{
+    padding-right: 1em !important;
+}
+
+.navbar-default {
+    /*background-color: #f8f8f8;*/
+    background-color: #18791F !important;
+    /*border-color: #e7e7e7;*/
+    border-top-color: rgb(231, 231, 231);
+    border-right-color: rgb(231, 231, 231);
+    border-bottom-color: rgb(231, 231, 231);
+    border-left-color: rgb(231, 231, 231);
+}
+.article_genealogy {
+  background-color: #FFFFFF !important;
+  padding: 1.5em 5em 1.5em 5em;
+  text-align: justify;
+}
+
+@media (max-width: 979px) {
+  .article_genealogy  {
+  padding: 0.5em 5em 0.5em 5em;
+  }
+}
+
+.family_section_name{
+  background-color: #FFFFFF !important;
+  padding: 1.5em 5em 1.5em 5em;
+}
+.sub_article_genealogy {
+  background-color: #FFFFFF !important;
+  padding: 1.5em 5em 1.5em 7em;
+  text-align: justify;
+}
+
+.article_container{
+  margin-bottom: 10em;
+}
+
+
+.page_title{
+  color: #FFFFFF !important;
+  font-size: 48px !important;
+  margin-bottom:2em;
+  margin-top:2em;
+  margin-left:1.5em;
+  width: 100%;
+  top: 0;
+}
+
+/*.body_content {
+  margin-top: 15em;
+}*/
+
+body{
+  padding-top:60px;
+}
+/*@media (max-width: 979px) {
+  body {
+    padding-top: 0px;
+  }
+}*/
+
+.navbar-fixed-top{
+  border:none !important;
+}
+
+p{
+  font-family: Slabo !important;
+}
+
+h1{
+  font-family:Lora !important;
+}
+
+h2{
+  font-family:Lora !important;
+}
+
+h3{
+  font-family:Lora !important;
+}
+
+/*.article_container h1{
+  font-size:30px !important;
+}*/
+
+.article_container img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto 
+}
+
+.article_container a{
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.page_section{
+  margin-bottom: 5em;
+}

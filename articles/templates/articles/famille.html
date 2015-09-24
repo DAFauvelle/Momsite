@@ -2,29 +2,54 @@
 
 {% block content_block %}
 
+    <div class="family_section_name">
+        <div class="page_section">
+            <h1>Famille {{ famille }}</h1>
+        </div>
+    </div>
     {% for article in articles %}
         {# {% if article.family == famille %} #}
             {% if article.parent.title == 'none' %}
-                <h1>{{ article.title }}</h1>
-                <p>{{ article.text }}</p>
-                
-                {% for phot in photos %}
-                    {% if phot.article == article %}
-                        <img src="{{ phot.la_photo.url }}"/>
-                    {% endif %}
-                {% endfor %}
-                
-                {% for a in articles %}
-                    {% if a.parent == article %}
-                        <h3>{{ a.title }}</h3>
-                        <p><em>{{ a.text }}</em></p>
-                            {% for phot in photos %}
-                                {% if phot.article == a %}
-                                    <img src="{{ phot.la_photo.url }}"/>
-                                {% endif %}
-                            {% endfor %}
-                    {% endif %}
-                {% endfor %}
+
+                <div class="article_container">
+                    <div class="article_genealogy">
+                        
+                        
+                        <h2>{{ article.title }}</h2>
+                        <p>{{ article.text }}</p>
+                        
+                        {% for phot in photos %}
+                            {% if phot.article == article %}
+                                <img src="{{ phot.la_photo.url }}"/>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        {% for ipdf in imagesPdf %}
+                            {% if ipdf.article == article %}
+                                    <a href="{{ ipdf.la_photo.url }}">{{ ipdf.title }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>   
+                        {% for a in articles %}
+                            {% if a.parent == article %}
+                            <div class="sub_article_genealogy">
+                                <h3>{{ a.title }}</h3>
+                                <p>{{ a.text }}</p>
+                                    {% for phot in photos %}
+                                        {% if phot.article == a %}
+                                            <img src="{{ phot.la_photo.url }}"/>
+                                        {% endif %}
+                                    {% endfor %}
+                                    
+                                    {% for ipdf in imagesPdf %}
+                                        {% if ipdf.article == article %}
+                                            <a href="{{ ipdf.la_photo.url }}">{{ ipdf.title }}</a>
+                                        {% endif %}
+                                    {% endfor %}
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                </div>
             {% endif %}
         {# {% endif %} #}
     {% endfor %}

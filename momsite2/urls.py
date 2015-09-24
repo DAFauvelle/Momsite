@@ -9,7 +9,7 @@ urlpatterns = [
 #List of URLs relevant to the app
     #url(r'^articles/', include('articles.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.index),
+    url(r'^$', views.index, name='home'),
     url(r'^articles/', include('articles.urls')),
     url(r'^famille/(?P<famille>.*)/', views.famille, name='family-detail'),
     url(r'^bibliographie/', views.bibliographie, name = 'bibliographie-detail'),

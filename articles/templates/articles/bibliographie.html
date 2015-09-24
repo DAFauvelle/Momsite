@@ -2,16 +2,25 @@
 
 {% block content_block %}
 
-    <h2>Bibliographie</h2>
-    {% for family in famillies %}
-        {% if family.name != 'none' %}
-            <h3>{{ family.name }}</h3>
-            {% for ref in refs %}
-                {% if ref.article.family == family %}
-                    <p>{{ ref.title }}</p>
+
+    <div class="article_container">
+        
+        <div class="article_genealogy">
+            <div class="page_section">
+                <h1>Bibliographie</h1>
+            </div>
+            
+            {% for family in famillies %}
+                {% if family.name != 'none' %}
+                    <h3>{{ family.name }}</h3>
+                    {% for ref in refs %}
+                        {% if ref.article.family == family %}
+                            <p>{{ ref.title }}</p>
+                        {% endif %}
+                    {% endfor %}
                 {% endif %}
             {% endfor %}
-        {% endif %}
-    {% endfor %}
+        </div>
+    </div>
 
 {% endblock %}

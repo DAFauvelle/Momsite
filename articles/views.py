@@ -2,7 +2,7 @@ from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 from django.template import Context, loader
-from .models import Article, Family, Reference, Liens, Photos
+from .models import Article, Family, Reference, Liens, Photos, ImagePDF
 
 # Create your views here.
 """def index(resquest):
@@ -23,11 +23,13 @@ def famille(request, famille):
         if (a.family == famille_choisi):
             les_articles.append(a)
     photos = Photos.objects.all()
+    imagesPdf = ImagePDF.objects.all()
     return render_to_response('articles/famille.html',{
         'articles':les_articles,
         'famillies': Family.objects.all(),
         'famille': famille_choisi,
         'photos': photos,
+        'imagesPdf': imagesPdf
     })
 
 def bibliographie(request):
