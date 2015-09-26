@@ -97,14 +97,15 @@ h3{
 .article_container img{
   display: block;
   margin-left: auto;
-  margin-right: auto 
+  margin-right: auto
 }
 
-.article_container a{
+.pdf_link {
   text-align:center;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  list-style-type: none;
 }
 
 .page_section{

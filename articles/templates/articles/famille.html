@@ -13,23 +13,23 @@
 
                 <div class="article_container">
                     <div class="article_genealogy">
-                        
-                        
+
+
                         <h2>{{ article.title }}</h2>
                         <p>{{ article.text }}</p>
-                        
+
                         {% for phot in photos %}
                             {% if phot.article == article %}
                                 <img src="{{ phot.la_photo.url }}"/>
                             {% endif %}
                         {% endfor %}
-                        
+
                         {% for ipdf in imagesPdf %}
                             {% if ipdf.article == article %}
-                                    <a href="{{ ipdf.la_photo.url }}">{{ ipdf.title }}</a>
+                                    <a class="pdf_link" href="{{ ipdf.la_photo.url }}">{{ ipdf.title }}</a>
                             {% endif %}
                         {% endfor %}
-                    </div>   
+                    </div>
                         {% for a in articles %}
                             {% if a.parent == article %}
                             <div class="sub_article_genealogy">
@@ -40,7 +40,7 @@
                                             <img src="{{ phot.la_photo.url }}"/>
                                         {% endif %}
                                     {% endfor %}
-                                    
+
                                     {% for ipdf in imagesPdf %}
                                         {% if ipdf.article == article %}
                                             <a href="{{ ipdf.la_photo.url }}">{{ ipdf.title }}</a>
