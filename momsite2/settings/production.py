@@ -91,8 +91,13 @@ WSGI_APPLICATION = 'momsite2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME':'deacoss2gopcjr',
+        'USER':'xhpxjczmagjwtv',
+        'PASSWORD':'b7QvXav6X8FVJ_OWBGKCAbCdRu',
+        'HOST':'ec2-204-236-228-77.compute-1.amazonaws.com',
+        'PORT':'5432',
+        #'NAME':os.path.join(BASE_DIR, 'db2'),
     }
 }
 
