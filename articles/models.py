@@ -13,7 +13,7 @@ class Article(models.Model):
     text = RichTextField()
     family = models.ForeignKey(Family)
     family_name = family.name
-    #parent = models.ForeignKey('self')
+    parent = models.ForeignKey('self', null=True)
 
     def __unicode__(self):
         return self.title
