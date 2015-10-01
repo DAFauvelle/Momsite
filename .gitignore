@@ -1,6 +1,7 @@
 .DS_STORE
 *.sqlite3
 momsite2/settings/local.py
+momsite2/settings/local.pyc
 momsite2/settings.py
 
 # Byte-compiled / optimized / DLL files

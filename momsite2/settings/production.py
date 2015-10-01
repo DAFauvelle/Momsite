@@ -17,9 +17,24 @@ DATABASES = settings.DATABASES
 PROJECT_DIR = os.path.dirname(__file__)
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
+AWS_STORAGE_BUCKET_NAME = 'genealogybucket'
+AWS_ACCESS_KEY_ID = 'AKIAJ7C72JF6JS4UNG5Q'
+AWS_SECRET_ACCESS_KEY = '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'
 
+# Tell django-storages that when coming up with the URL for an item in S3 storage, keep
+# it simple - just use this domain plus the path. (If this isn't set, things get complicated).
+# This controls how the `static` template tag from `staticfiles` gets expanded, if you're using it.
+# We also use it in the next setting.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# This is used by the `static` template tag from `static`, if you're using that. Or if anything else
+# refers directly to STATIC_URL. So it's safest to always set it.
+STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+# Tell the staticfiles app to use S3Boto storage when writing the collected static files (when
+# you run `collectstatic`).
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 MEDIA_URL = "/media/"
-STATIC_URL = "/static/"
+#STATIC_URL = "/static/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -49,7 +64,7 @@ TEMPLATES = [
 SECRET_KEY = '6@@z-3kyageaqtu=3@_cdulnz-pq=_!5hdb=^e2ci=v3c@cbr%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 TEMPLATE_DEBUG = False
 
@@ -69,6 +84,7 @@ INSTALLED_APPS = (
     'articles',
     'ckeditor',
     'gunicorn',
+    'storages',
 )
 
 MIDDLEWARE_CLASSES = (
