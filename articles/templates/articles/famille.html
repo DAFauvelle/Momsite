@@ -34,7 +34,7 @@
                             {% if a.parent == article %}
                             <div class="sub_article_genealogy">
                                 <h3>{{ a.title }}</h3>
-                                <p>{{ a.text }}</p>
+                                <p>{{ a.text|safe }}</p>
                                     {% for phot in photos %}
                                         {% if phot.article == a %}
                                             <img src="{{ phot.la_photo.url }}"/>
