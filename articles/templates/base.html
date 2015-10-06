@@ -2,13 +2,13 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>Genealogie</title>
+        <title>Génialogie</title>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="//getbootstrap.com/examples/blog/blog.css">
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
         <link href='https://fonts.googleapis.com/css?family=Slabo+27px|Lora' rel='stylesheet' type='text/css'>
-        <!-- Latest compiled and minified JavaScript -->
+         <!--Latest compiled and minified JavaScript -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
          <style>
             body{
@@ -17,8 +17,8 @@
         </style>
     <body>
 
-            <nav class="navbar navbar-default navbar-fixed-top">
-
+            <nav class="navbar navbar-default navbar-fixed-top" role"navigation">
+                <div class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="sr-only">Toggle navigation</span>
@@ -27,9 +27,9 @@
                             <span class="icon-bar"></span>
                         </button>
                     </div>
-
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
+                            <li><a href = "{% url 'home' %}">Accueil</a></li>
                             {% for f in famillies %}
                                 {% if f.name != 'none' %}
                                     <li><a href ="{% url 'family-detail' famille=f.name %}">Famille {{ f.name }}</a></li>
@@ -38,12 +38,11 @@
 
                             <li><a href = "{% url 'bibliographie-detail' %}">Bibliographie</a></li>
                             <li><a href = "{% url 'liens-detail' %}">Liens</a></li>
-                            <li><a href = "{% url 'home' %}">Accueil</a></li>
                         </ul>
                     </div>
-
+                </div>
             </nav>
-            <h1 class="page_title">Généalogie</h1>
+            <h1 class="page_title">Génialogie</h1>
 
         <div class="body_content">
         {% block content_block %} Default content for the block{% endblock %}
