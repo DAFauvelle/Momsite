@@ -33,7 +33,7 @@
   }
 }
 
-.family_section_name{
+.page_section_name{
   background-color: #FFFFFF !important;
   padding: 1.5em 5em 1.5em 5em;
   opacity: 0.9;
@@ -46,14 +46,14 @@
   opacity: 0.9;
 }
 
-.article_container{
+/*.article_container{
   margin-bottom: 10em;
-}
+}*/
 
 
 .page_title{
   color: #FFFFFF !important;
-  font-size: 48px !important;
+  font-size: 60px !important;
   margin-bottom:2em;
   margin-top:2em;
   margin-left:1.5em;
@@ -88,6 +88,7 @@ h1{
 
 h2{
   font-family:Lora !important;
+  font-size: 45px !important;
 }
 
 h3{
@@ -112,6 +113,6 @@ h3{
   list-style-type: none;
 }
 
-.page_section{
+/*.page_section{
   margin-bottom: 5em;
-}
+}*/
