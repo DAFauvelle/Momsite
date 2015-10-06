@@ -24,6 +24,7 @@
   background-color: #FFFFFF !important;
   padding: 1.5em 5em 1.5em 5em;
   text-align: justify;
+  opacity: 0.9;
 }
 
 @media (max-width: 979px) {
@@ -35,11 +36,14 @@
 .family_section_name{
   background-color: #FFFFFF !important;
   padding: 1.5em 5em 1.5em 5em;
+  opacity: 0.9;
 }
+
 .sub_article_genealogy {
   background-color: #FFFFFF !important;
   padding: 1.5em 5em 1.5em 7em;
   text-align: justify;
+  opacity: 0.9;
 }
 
 .article_container{

@@ -35,7 +35,9 @@
 .family_section_name{
   background-color: #FFFFFF !important;
   padding: 1.5em 5em 1.5em 5em;
+  opacity: 0.9;
 }
+
 .sub_article_genealogy {
   background-color: #FFFFFF !important;
   padding: 1.5em 5em 1.5em 7em;
@@ -58,7 +60,7 @@
 }
 
 /*.body_content {
-  margin-top: 15em;
+  width: 100%;
 }*/
 
 body{
