@@ -53,17 +53,17 @@
 
 .page_title{
   color: #FFFFFF !important;
-  font-size: 60px !important;
+  font-size: 70px !important;
   margin-bottom:2em;
   margin-top:2em;
-  margin-left:1.5em;
+  margin-left:1em;
   width: 100%;
   top: 0;
 }
 
-/*.body_content {
-  margin-top: 15em;
-}*/
+.body_content {
+  margin-bottom: 5em;
+}
 
 body{
   padding-top:60px;
