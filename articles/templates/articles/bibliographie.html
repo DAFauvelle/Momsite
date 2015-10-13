@@ -14,7 +14,7 @@
 
 
             {% for family in famillies %}
-                {% if family.name != 'none' %}
+                {% if family.name != 'none' and family.name != 'Informations techniques' %}
                     <h3>{{ family.name }}</h3>
                     {% for ref in refs %}
                         {% if ref.article.family == family %}
