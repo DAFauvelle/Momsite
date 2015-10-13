@@ -31,15 +31,18 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href = "{% url 'home' %}">Accueil</a></li>
                             {% for f in famillies %}
-                                {% if f.name == 'Informations techniques' %}
-                                    <li><a href ="{% url 'family-detail' famille=f.name %}">{{ f.name }}</a></li>
-                                {% elif f.name != 'none' %}
+                                {% if f.name != 'none' and f.name != 'Informations techniques' %}
                                     <li><a href ="{% url 'family-detail' famille=f.name %}">Famille {{ f.name }}</a></li>
                                 {% endif %}
                             {% endfor %}
 
                             <li><a href = "{% url 'bibliographie-detail' %}">Bibliographie</a></li>
                             <li><a href = "{% url 'liens-detail' %}">Liens</a></li>
+                            {% for f in famillies %}
+                                {% if f.name == 'Informations techniques' %}
+                                    <li><a href ="{% url 'family-detail' famille=f.name %}">{{ f.name }}</a></li>
+                                {% endif %}
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
