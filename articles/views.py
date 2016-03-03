@@ -22,6 +22,7 @@ def famille(request, famille):
     for a in articles:
         if (a.family == famille_choisi):
             les_articles.append(a)
+    les_articles.sort(key=lambda x: x.my_order)
     photos = Photos.objects.all()
     imagesPdf = ImagePDF.objects.all()
     return render_to_response('articles/famille.html',{

@@ -14,9 +14,13 @@ class Article(models.Model):
     family = models.ForeignKey(Family)
     family_name = family.name
     parent = models.ForeignKey('self', null=True, blank=True)
+    my_order = models.PositiveIntegerField(default=0, blank=False, null=False)
 
     def __unicode__(self):
         return self.title
+        
+#    class Meta(object):
+#        ordering = ('my_order',)
 
 class Reference(models.Model):
     title = models.CharField(max_length=255)
