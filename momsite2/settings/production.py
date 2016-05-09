@@ -94,6 +94,7 @@ INSTALLED_APPS = (
     'ckeditor',
     'gunicorn',
     'storages',
+    'adminsortable2',
 )
 
 MIDDLEWARE_CLASSES = (

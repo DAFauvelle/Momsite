@@ -69,6 +69,7 @@ INSTALLED_APPS = (
     'articles',
     'ckeditor',
     'gunicorn',
+    'adminsortable2',
 )
 
 MIDDLEWARE_CLASSES = (

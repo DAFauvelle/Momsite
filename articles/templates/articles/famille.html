@@ -47,7 +47,7 @@
                                     {% endfor %}
 
                                     {% for ipdf in imagesPdf %}
-                                        {% if ipdf.article == article %}
+                                        {% if ipdf.article == a %}
                                             <a href="{{ ipdf.la_photo.url }}">{{ ipdf.title }}</a>
                                         {% endif %}
                                     {% endfor %}
