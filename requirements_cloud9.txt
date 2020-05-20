@@ -35,7 +35,7 @@ greenlet==0.4.2
 gunicorn==19.3.0
 heroku==0.1.4
 html5lib==0.999
-httplib2==0.8
+httplib2==0.18.0
 ipython==1.2.1
 iso8601==0.1.10
 jsonpatch==1.3
